@@ -1,4 +1,4 @@
-# Laboratories Repository
+# Web Technologies Labs
 
 
 ## Personal information
