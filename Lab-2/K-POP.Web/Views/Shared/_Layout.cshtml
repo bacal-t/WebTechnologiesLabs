@@ -1,0 +1,104 @@
+﻿@using System.Web.Optimization;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>K-POP</title>
+    <!-- Bootstrap core CSS -->
+    @Styles.Render("~/bundles/bootstrap/css")
+    <!-- Custom fonts for this template -->
+    @Styles.Render("~/bundles/font-awesome/css")
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Plugin CSS -->
+    @Styles.Render("~/bundles/magnific-popup/css")
+    <!-- Custom styles for this template -->
+    @Styles.Render("~/bundles/main/css")
+</head>
+<body id="page-top">
+    @RenderBody()
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+        @Html.Partial("_Navigation")
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center">
+        @Html.Partial("_Header")
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section class="portfolio" id="portfolio">
+        @Html.Partial("_Portfolio")
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-primary text-white mb-0" id="about">
+        @Html.Partial("_About")
+    </section>
+
+
+
+
+    <div class="copyright py-4 text-center text-white">
+        <div class="container">
+            <small>Copyright © K-POP 2018</small>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed " style="display: none;">
+        @Html.Partial("_Scroll")
+    </div>
+
+    <!-- Portfolio Modals -->
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+        @Html.Partial("_Modal1")
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
+        @Html.Partial("_Modal2")
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
+        @Html.Partial("_Modal3")
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
+        @Html.Partial("_Modal4")
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
+        @Html.Partial("_Modal5")
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
+        @Html.Partial("_Modal6")
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    @Scripts.Render("~/bundles/jquery/js")
+    @Scripts.Render("~/bundles/bootstrap/js")
+
+    <!-- Plugin JavaScript -->
+    @Scripts.Render("~/bundles/jquery-easing/js")
+    @Scripts.Render("~/bundles/magnific-popup/js")
+
+    <!-- Contact Form JavaScript -->
+    @Scripts.Render("~bundles/jqValidation/js")
+
+    <!-- Custom scripts for this template -->
+    @Scripts.Render("~/bundles/main/js")
+</body>
+</html>
