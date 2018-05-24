@@ -1,0 +1,12 @@
+﻿@model CarpentryStore2.Models.ArmchairListViewModel
+@{ 
+    ViewBag.Title = "Стулья";
+}
+    <h3 class="FontDoor">Кресла</h3>
+    @foreach (var d in Model.Armchairs)
+    {
+        Html.RenderPartial("ArmchairSummary", d);
+    }
+    <div class="pager">
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Armchairs", new { page = x }))
+    </div>

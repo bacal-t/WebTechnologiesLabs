@@ -1,0 +1,37 @@
+﻿@model IEnumerable<CarpentyStore2.Domain.Entities.Land>
+
+
+@{
+    ViewBag.Title = "LandIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<body>
+    <h2>All Goods</h2>
+    <table class="Grid">
+        <tr>
+            <th>ID</th>
+            <th>TypeDoor</th>
+            <th>Tree</th>
+            <th class="NumericCol">Price</th>
+            <th>Действия</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.LandId</td>
+                <td>@Html.ActionLink(item.TypeOfLand, "EditLand", new { item.LandId })</td>
+                <td>@item.Tree</td>
+                <td class="NumericCol">@item.Price.ToString("c")</td>
+                <td>
+                    @using (Html.BeginForm("DeleteLand", "Admin"))
+                    {
+                        @Html.Hidden("DoorId", item.LandId)
+                        <input type="submit" value="Delete" />
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+    <p>@Html.ActionLink("Добавить новый товар", "CreateLand")</p>
+</body>

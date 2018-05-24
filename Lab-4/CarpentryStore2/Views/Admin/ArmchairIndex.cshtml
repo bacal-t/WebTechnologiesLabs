@@ -1,0 +1,36 @@
+﻿@model IEnumerable<CarpentyStore2.Domain.Entities.Armchair>
+
+@{
+    ViewBag.Title = "LandIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<body>
+    <h2>All Goods</h2>
+    <table class="Grid">
+        <tr>
+            <th>ID</th>
+            <th>TypeDoor</th>
+            <th>Tree</th>
+            <th class="NumericCol">Price</th>
+            <th>Действия</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ArmchairId</td>
+                <td>@Html.ActionLink(item.TypeOfArmchair, "EditArmchair", new { item.ArmchairId })</td>
+                <td>@item.Tree</td>
+                <td class="NumericCol">@item.Price.ToString("c")</td>
+                <td>
+                    @using (Html.BeginForm("Delete", "Admin"))
+                    {
+                        @Html.Hidden("DoorId", item.ArmchairId)
+                        <input type="submit" value="Delete" />
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+    <p>@Html.ActionLink("Добавить новый товар", "CreateArmchair")</p>
+</body>

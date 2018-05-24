@@ -1,0 +1,31 @@
+﻿@model CarpentyStore2.Domain.Entities.Land
+
+@{
+    ViewBag.Title = "EditLand";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Редактирование</h2>
+@using (Html.BeginForm("EditLand", "Admin",
+                FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.EditorForModel()
+    <div class="editor-label">Изображение</div>
+    <div class="editor-field">
+        @if (Model.ImageData == null)
+        {
+            @:None
+        }
+        else
+        {
+            <img width="150" height="150" src="@Url.Action("LandGetImage","Home",
+                                              new {Model.LandId})" />
+        }
+        <div>
+            Загрузить новое изображение
+            <input type="file" name="Image" />
+        </div>
+    </div>
+    <input type="submit" value="Сохранить" />
+    @Html.ActionLink("Отменить и вернуться к списку", "LandIndex")
+}

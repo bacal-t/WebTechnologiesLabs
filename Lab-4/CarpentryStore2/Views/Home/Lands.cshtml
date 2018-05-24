@@ -1,0 +1,12 @@
+﻿@model  CarpentryStore2.Models.LandsListViewModel
+@{ 
+    ViewBag.Title = "Лестницы";
+}
+    <h3 class="FontDoor">Лестницы</h3>
+    @foreach (var d in Model.Lands)
+    {
+        Html.RenderPartial("LandSummary", d);
+    }
+    <div class="pager">
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Lands", new { page = x }))
+    </div>

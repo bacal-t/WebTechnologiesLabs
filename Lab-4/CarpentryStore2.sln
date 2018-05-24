@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarpentryStore2.WebUI", "CarpentryStore2\CarpentryStore2.WebUI.csproj", "{EFCB007B-1BD6-4D36-A997-464E5DF807FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarpentyStore2.Domain", "CarpentyStore2.Domain\CarpentyStore2.Domain.csproj", "{4CEBC060-9D72-45F1-8062-784C5483652F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFCB007B-1BD6-4D36-A997-464E5DF807FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFCB007B-1BD6-4D36-A997-464E5DF807FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFCB007B-1BD6-4D36-A997-464E5DF807FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFCB007B-1BD6-4D36-A997-464E5DF807FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CEBC060-9D72-45F1-8062-784C5483652F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CEBC060-9D72-45F1-8062-784C5483652F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CEBC060-9D72-45F1-8062-784C5483652F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CEBC060-9D72-45F1-8062-784C5483652F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

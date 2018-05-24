@@ -1,0 +1,20 @@
+﻿@model CarpentyStore2.Domain.Entities.Armchair
+    <div class="ViewGood">
+
+        <p class="body-content" id="defenition" title="Тип кресла">
+            @Model.TypeOfArmchair
+            <div class="item">
+                @if (Model.ImageData != null)
+            {
+                    <div style="margin-right: 20px;">
+                        <img class="borderImage" width="200" height="300" src="@Url.Action("ArmchairGetImage", "Home",
+new { Model.ArmchairId})" />
+                    </div>
+                }
+            </div>
+            <label>Дерево:</label>   <input type="text" id="idForPrice" title="Вид дерево" 
+                                            readonly value=@Model.Tree />
+            Цена:  <input type="text" id="idForPrice" title="Цена за кв.м"
+                          readonly value=@Model.Price.ToString("c") /> &#8381;
+        </p>
+    </div>

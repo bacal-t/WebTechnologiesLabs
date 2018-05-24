@@ -1,0 +1,28 @@
+﻿@model CarpentyStore2.Domain.Entities.Door
+
+
+        
+         <p class="ViewGood" id="defenition"> @Model.TypeDoor </p>
+            
+                @if (Model.ImageData != null)
+               {
+                    <div>
+                        <img id="picture" class="minimized" alt="клик для увеличения" 
+                           src="@Url.Action("GetImage", "Home",
+                                new { Model.DoorId })"                           
+                             />
+                    </div>
+                }
+          
+            <label >Дерево:</label>   <input type="text" title="Вид дерево" readonly id="idForPrice" value=@Model.Tree />
+           <label>Цена:</label>   <input type="text" id="idForPrice" title="Цена за кв.м"
+                   readonly value=@Model.Price.ToString("c")/> &#8381;
+     
+ 
+
+
+ 
+
+
+
+

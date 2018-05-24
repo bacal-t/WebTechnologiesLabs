@@ -1,0 +1,37 @@
+﻿@model IEnumerable<CarpentyStore2.Domain.Entities.Door>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<body>
+    <h2>All Goods</h2>
+    <table class="Grid">
+        <tr>
+            <th>ID</th>
+            <th>TypeDoor</th>
+            <th>Tree</th>
+            <th class="NumericCol">Price</th>
+            <th>Действия</th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.DoorId</td>
+                <td>@Html.ActionLink(item.TypeDoor, "Edit", new { item.DoorId })</td>
+                <td>@item.Tree</td>
+                <td class="NumericCol">@item.Price.ToString("c")</td>
+                <td>
+                    @using (Html.BeginForm("Delete", "Admin"))
+                    {
+                        @Html.Hidden("DoorId", item.DoorId)
+                        <input type="submit" value="Delete"/>
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+<p>@Html.ActionLink("Добавить новый товар","Create")</p>
+</body>
+

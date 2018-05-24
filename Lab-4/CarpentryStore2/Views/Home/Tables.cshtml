@@ -1,0 +1,13 @@
+﻿@model CarpentryStore2.Models.TableListViewModel
+@{
+    ViewBag.Title = "Столы";
+}
+
+    <h3 class="FontDoor">Столы</h3>
+    @foreach (var d in Model.Tables)
+    {
+        Html.RenderPartial("TableSummary", d);
+    }
+    <div class="pager">
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Tables", new { page = x }))
+    </div>
